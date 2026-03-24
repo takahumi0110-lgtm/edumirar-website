@@ -12,7 +12,8 @@ function convertDriveUrlToImageLink(url) {
     if (!url) return '';
     const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
     if (match && match[1]) {
-        return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+        // Google Driveの画像埋め込みブロックを回避しやすくするため、サムネイル用URLを使用
+        return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w800`;
     }
     return url;
 }

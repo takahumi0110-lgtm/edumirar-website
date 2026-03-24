@@ -225,12 +225,12 @@
                 </div>
                 
                 <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px;">GOLEIRO</h3>
-                <div class="staff-grid" id="goleiro-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; margin-bottom: 40px;">
+                <div class="staff-grid" id="goleiro-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-bottom: 40px;">
                     <!-- JS will populate Goleiros -->
                 </div>
 
                 <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px;">FIELD PLAYER</h3>
-                <div class="staff-grid" id="field-player-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; margin-bottom: 50px;">
+                <div class="staff-grid" id="field-player-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-bottom: 50px;">
                     <!-- JS will populate Field Players -->
                 </div>
 
@@ -238,7 +238,7 @@
                     <h2>スタッフ</h2>
                 </div>
                 
-                <div class="staff-grid" id="staff-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px;">
+                <div class="staff-grid" id="staff-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px;">
                     <!-- JS will populate Staffs -->
                 </div>
 
@@ -250,30 +250,53 @@
             // Schedule relies on Google Sheets sync
 
             // --- Player / Staff Grids Setup ---
-            function createCard(role, name) {
+            function createPlayerCard(number, name, role, message) {
                 return `
-                    <div class="staff-card" style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; padding: 10px; text-align: center;">
-                        <img src="images/dummy-avatar.png" onerror="this.src='https://placehold.co/150x150/e0e0e0/999?text=No+Photo'" alt="${role}" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 5px; margin-bottom: 10px;">
-                        <p class="role" style="font-size: 0.7rem; color: var(--primary-color); font-weight: bold; margin: 0;">${role}</p>
-                        <p class="name" style="font-size: 0.9rem; font-weight: bold; margin: 5px 0 0;">${name}</p>
+                    <div class="staff-card player-card" style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 12px; text-align: center; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                        <img src="images/dummy-avatar.png" onerror="this.src='https://placehold.co/150x150/e0e0e0/999?text=No+Photo'" alt="${name}" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 5px; margin-bottom: 12px;">
+                        <div style="display: flex; justify-content: center; align-items: baseline; gap: 6px; margin-bottom: 4px;">
+                            <span style="font-size: 1.2rem; font-weight: 900; color: var(--primary-color); font-family: var(--font-en);">${number}</span>
+                            <span style="font-size: 1rem; font-weight: bold; color: #333;">${name}</span>
+                        </div>
+                        <p class="role" style="font-size: 0.75rem; color: #666; font-weight: bold; margin: 0 0 10px 0;">${role}</p>
+                        <div style="background: #fff; border-radius: 5px; padding: 8px; border: 1px solid #eee; margin-top: auto; text-align: left;">
+                            <p class="message" style="font-size: 0.8rem; color: #555; margin: 0; line-height: 1.4;">${message}</p>
+                        </div>
                     </div>
                 `;
             }
 
-            document.getElementById('goleiro-grid').innerHTML = 
-                createCard('GOLEIRO', '選手名') + createCard('GOLEIRO', '選手名');
+            function createStaffCard(role, name, message) {
+                return `
+                    <div class="staff-card staff-only-card" style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 12px; text-align: center; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                        <img src="images/dummy-avatar.png" onerror="this.src='https://placehold.co/150x150/e0e0e0/999?text=No+Photo'" alt="${name}" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 5px; margin-bottom: 12px;">
+                        <p class="role" style="font-size: 0.75rem; color: var(--primary-color); font-weight: bold; margin: 0;">${role}</p>
+                        <p class="name" style="font-size: 1rem; font-weight: bold; color: #333; margin: 4px 0 10px 0;">${name}</p>
+                        <div style="background: #fff; border-radius: 5px; padding: 8px; border: 1px solid #eee; margin-top: auto; text-align: left;">
+                            <p class="message" style="font-size: 0.8rem; color: #555; margin: 0; line-height: 1.4;">${message}</p>
+                        </div>
+                    </div>
+                `;
+            }
 
+            // Goleiro
+            document.getElementById('goleiro-grid').innerHTML = 
+                createPlayerCard('1', '選手名', 'GOLEIRO', 'ここに一言。意気込みなど。') + 
+                createPlayerCard('12', '選手名', 'GOLEIRO', 'ここに一言。よろしくおねがいします。');
+
+            // Field Players
             let fieldPlayersHtml = '';
             for(let i=0; i<15; i++) {
-                fieldPlayersHtml += createCard('FIELD PLAYER', '選手名');
+                fieldPlayersHtml += createPlayerCard(String(i+2), '選手名', 'FIELD PLAYER', 'ここに一言。意気込みなど。');
             }
             document.getElementById('field-player-grid').innerHTML = fieldPlayersHtml;
 
+            // Staff
             document.getElementById('staff-grid').innerHTML = 
-                createCard('監督', 'スタッフ名') + 
-                createCard('マネージャー', 'スタッフ名') + 
-                createCard('スタッフ', 'スタッフ名') + 
-                createCard('スタッフ', 'スタッフ名');
+                createStaffCard('監督', 'スタッフ名', 'ここに一言。意気込みなど。') + 
+                createStaffCard('マネージャー', 'スタッフ名', 'ここに一言。サポート頑張ります。') + 
+                createStaffCard('スタッフ', 'スタッフ名', 'ここに一言。') + 
+                createStaffCard('スタッフ', 'スタッフ名', 'ここに一言。');
         </script>
 
     </main>
