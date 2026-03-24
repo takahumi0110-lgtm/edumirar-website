@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f5e9" />
+      <stop offset="100%" stop-color="#c8e6c9" />
+    </linearGradient>
+    <linearGradient id="coach-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e7d32" />
+      <stop offset="100%" stop-color="#1b5e20" />
+    </linearGradient>
+    <linearGradient id="kid-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb74d" />
+      <stop offset="100%" stop-color="#f57c00" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+  
+  <!-- Decorative abstract background elements -->
+  <circle cx="700" cy="100" r="150" fill="#a5d6a7" opacity="0.3" />
+  <circle cx="100" cy="500" r="200" fill="#81c784" opacity="0.2" />
+  <path d="M0,450 Q400,350 800,500 L800,600 L0,600 Z" fill="#a5d6a7" opacity="0.5" />
+  
+  <!-- Coach (Adult silhouette) -->
+  <g transform="translate(150, 100)">
+    <!-- Head -->
+    <circle cx="100" cy="80" r="45" fill="url(#coach-grad)" />
+    <!-- Body -->
+    <path d="M60,140 Q100,120 140,140 L160,250 Q165,300 130,350 L70,350 Q35,300 40,250 Z" fill="url(#coach-grad)" />
+    <!-- Arm pointing -->
+    <path d="M130,160 Q200,180 250,220" fill="none" stroke="url(#coach-grad)" stroke-width="25" stroke-linecap="round" />
+  </g>
+
+  <!-- Kid (Child silhouette) -->
+  <g transform="translate(450, 180)">
+    <!-- Head -->
+    <circle cx="100" cy="80" r="35" fill="url(#kid-grad)" />
+    <!-- Body -->
+    <path d="M70,130 Q100,110 130,130 L145,230 Q150,270 120,310 L80,310 Q50,270 55,230 Z" fill="url(#kid-grad)" />
+    <!-- Leg kicking -->
+    <path d="M90,290 Q70,350 40,380" fill="none" stroke="url(#kid-grad)" stroke-width="25" stroke-linecap="round" />
+  </g>
+
+  <!-- Soccer Ball -->
+  <g transform="translate(420, 520)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" />
+    <path d="M0,-15 L14,-5 L9,12 L-9,12 L-14,-5 Z" fill="#333" />
+    <path d="M14,-5 L28,-10" stroke="#333" stroke-width="4" />
+    <path d="M9,12 L18,24" stroke="#333" stroke-width="4" />
+    <path d="M-9,12 L-18,24" stroke="#333" stroke-width="4" />
+    <path d="M-14,-5 L-28,-10" stroke="#333" stroke-width="4" />
+    <path d="M0,-15 L0,-30" stroke="#333" stroke-width="4" />
+  </g>
+
+  <!-- Flowing energy lines to represent action -->
+  <path d="M200,350 Q400,450 600,300" fill="none" stroke="#fff" stroke-width="8" stroke-dasharray="10 15" opacity="0.6" />
+</svg>

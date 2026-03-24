@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-learn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e3f2fd" />
+      <stop offset="100%" stop-color="#bbdefb" />
+    </linearGradient>
+    <linearGradient id="teacher-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1565c0" />
+      <stop offset="100%" stop-color="#0d47a1" />
+    </linearGradient>
+    <linearGradient id="student-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbc02d" />
+      <stop offset="100%" stop-color="#f57f17" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bg-grad-learn)" />
+  
+  <!-- Decorative abstract background elements -->
+  <circle cx="100" cy="150" r="120" fill="#90caf9" opacity="0.3" />
+  <circle cx="650" cy="450" r="180" fill="#64b5f6" opacity="0.2" />
+  <polygon points="600,100 700,50 650,150" fill="#90caf9" opacity="0.5" />
+  <polygon points="150,500 250,450 200,550" fill="#64b5f6" opacity="0.4" />
+
+  <!-- Desk abstract -->
+  <rect x="250" y="380" width="400" height="25" rx="10" fill="#795548" />
+  <rect x="300" y="405" width="20" height="150" fill="#5d4037" />
+  <rect x="580" y="405" width="20" height="150" fill="#5d4037" />
+
+  <!-- Book on desk -->
+  <path d="M350,370 Q400,340 450,370 Q500,340 550,370 L530,380 Q490,360 450,380 Q410,360 370,380 Z" fill="#ffffff" />
+  <!-- Book pages lines -->
+  <line x1="380" y1="365" x2="430" y2="355" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" />
+  <line x1="390" y1="375" x2="440" y2="365" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" />
+  <line x1="470" y1="355" x2="520" y2="365" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" />
+  <line x1="460" y1="365" x2="510" y2="375" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Teacher (Adult silhouette) leaning in -->
+  <g transform="translate(100, 50)">
+    <!-- Head -->
+    <circle cx="150" cy="120" r="45" fill="url(#teacher-grad)" />
+    <!-- Body -->
+    <path d="M100,180 Q150,160 200,180 L230,300 Q200,350 150,350 L80,300 Z" fill="url(#teacher-grad)" />
+    <!-- Arm pointing at book -->
+    <path d="M180,210 Q280,250 320,300" fill="none" stroke="url(#teacher-grad)" stroke-width="25" stroke-linecap="round" />
+  </g>
+
+  <!-- Student (Child silhouette) sitting/engaged -->
+  <g transform="translate(500, 150)">
+    <!-- Head -->
+    <circle cx="120" cy="90" r="35" fill="url(#student-grad)" />
+    <!-- Body -->
+    <path d="M80,140 Q120,120 160,140 L170,260 Q150,290 120,290 L70,260 Z" fill="url(#student-grad)" />
+    <!-- Arm resting on book -->
+    <path d="M100,180 Q50,220 20,220" fill="none" stroke="url(#student-grad)" stroke-width="20" stroke-linecap="round" />
+  </g>
+</svg>

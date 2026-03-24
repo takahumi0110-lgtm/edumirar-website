@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUMIRAR | TOP TEAM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER (共通) ================= -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                    <!-- ロゴ画像 -->
+                    <img src="images/EDU-02.png" alt="EDUMIRAR" class="logo-icon">
+                    <span class="logo-text">EDUMIRAR OSAKA</span>
+                </a>
+            </div>
+            <nav class="pc-nav">
+                <a href="top-team.html">TOP TEAM</a>
+                <a href="academy.html">ACADEMY</a>
+                <a href="partner.html">PARTNER</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="https://www.instagram.com/edumirar_osaka?igsh=d253eTNsYndmdXB6" target="_blank"
+                    rel="noopener noreferrer" class="sns-icon" aria-label="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </nav>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-grid">
+            <div class="mobile-menu-block">
+                <h3>TOP TEAM</h3>
+                <ul>
+                    <li><a href="top-team.html">年間スケジュール</a></li>
+                    <li><a href="top-team.html">試合結果</a></li>
+                    <li><a href="top-team.html">メンバー・スタッフ</a></li>
+                    <li><a href="top-team.html">監督挨拶</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-block">
+                <h3>ACADEMY</h3>
+                <ul>
+                    <li><a href="academy.html">コベカツクラブ</a></li>
+                    <li><a href="academy.html">〇〇校</a></li>
+                    <li><a href="academy.html">募集要項</a></li>
+                    <li><a href="academy.html">問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-block">
+                <h3>PARTNER</h3>
+                <ul>
+                    <li><a href="partner.html">法人様向け</a></li>
+                    <li><a href="partner.html">個人の方向け</a></li>
+                    <li><a href="partner.html">活動報告</a></li>
+                    <li><a href="contact.html">問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-block">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li><a href="contact.html">入団・体験</a></li>
+                    <li><a href="contact.html">練習試合申し込み</a></li>
+                    <li><a href="contact.html">スポンサー各種</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <main class="main-content top-team-page">
+
+        <!-- ヒーロー (チーム写真) -->
+        <section class="team-hero" style="background-image: url('images/EDU-09.png');">
+            <div class="hero-overlay-center">
+                <h1>EDUMIRAR OSAKA<br>TOP TEAM</h1>
+            </div>
+        </section>
+
+        <!-- 現在順位 -->
+        <section class="ranking-sec bg-dark text-white">
+            <div class="container ranking-flex">
+                <div class="ranking-left">
+                    <p class="ranking-label">現在順位</p>
+                    <h2 class="ranking-league">大阪府フットサルリーグ 3部</h2>
+                    <div class="ranking-position" id="ranking-container">
+                        <span class="rank-num">4/26(日)開幕</span> <span class="rank-unit"></span> <span
+                            class="rank-sub"></span>
+                    </div>
+                </div>
+                <div class="ranking-right" style="text-align: right;">
+                    <a href="contact.html#partner" class="btn btn-primary"
+                        style="display: inline-block; margin-bottom: 10px; width: 100%; max-width: 320px; font-size: 0.95rem;">チームを応援したい方はコチラ
+                        &gt;</a><br>
+                    <a href="contact.html" class="btn btn-primary"
+                        style="display: inline-block; width: 100%; max-width: 320px; font-size: 0.95rem;">選手としてプレーしたい人はコチラ
+                        &gt;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- メッセージ -->
+        <section class="message-sec text-white"
+            style="position: relative; background-color: var(--primary-color); padding: 80px 0;">
+            <!-- 背景画像用のオーバーレイ層 -->
+            <div class="message-bg-img"
+                style="position: absolute; top:0; left:0; width:100%; height:100%; background-image: url('images/EDU-08.svg'); opacity: 0.15; background-size: cover; background-position: center; z-index: 1;">
+            </div>
+
+            <div class="container"
+                style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap;">
+                <!-- 左：キャッチコピー -->
+                <div class="msg-col" style="flex: 1; min-width: 250px;">
+                    <h2 style="font-size: 2.2rem; font-weight: 900; line-height: 1.2; margin: 0; white-space: nowrap;">
+                        <span style="font-size: 4rem; font-family: var(--font-en);">EDU</span>は<br>応援される<br>フットサルクラブへ
+                    </h2>
+                </div>
+                <!-- 中央：ロゴ -->
+                <div class="msg-col" style="flex: 1; min-width: 200px; text-align: center;">
+                    <img src="images/EDU-04.png" alt="Owl Logo" class="msg-logo"
+                        style="width: 100%; max-width: 240px; height: auto;">
+                </div>
+                <!-- 右：テキスト -->
+                <div class="msg-col" style="flex: 1.5; min-width: 300px;">
+                    <p style="margin-bottom: 20px; font-weight: 500; font-size: 0.95rem;">EDUMIRAR
+                        OSAKA(社会人)は、現在大阪府フットサル<br>リーグ3部に所属しております。2024年に設立しFリーグで<br>プレー経験のある監督を迎え全力でトレーニングに組み<br>シーズンを戦います。
+                    </p>
+                    <p style="font-weight: 500; font-size: 0.95rem;">
+                        チームテーマは「応援されるチーム」<br>スポンサー様や試合を見に来てくれる方を熱狂してくれる方<br>を増やし、フットサルや地域リーグを盛り上げる。<br>応援してくださる人たちにフットサルというチームスポーツを<br>通して全力で取り組む姿を見せることで感動を与える。<br>仕事をしながらプライベートの時間を削ってフットサルをプレー<br>している社会人だからこそ伝えることのできる感動や応援を<br>応援してくれる方に発信します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 年間スケジュール (スライダー) -->
+        <section class="schedule-sec bg-light-pink text-center">
+            <div class="container">
+                <h2 class="section-title text-primary" style="margin-bottom: 5px;">年間スケジュール</h2>
+                <p class="text-primary" style="margin-bottom: 30px;">練習試合、イベント参加をはじめ</p>
+
+                <!-- スライダーエリア -->
+                <div class="calendar-slider" style="position: relative; max-width: 500px; margin: 0 auto; overflow: hidden; padding: 0 40px;">
+                    <button class="slider-arrow prev" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); z-index: 10; font-size: 3rem; font-weight: 300; background: none; border: none; color: var(--primary-color); cursor: pointer;" onclick="moveDynamicSchedule(-1)">&lt;</button>
+
+                    <div class="slider-track-container" style="overflow: hidden; width: 100%;">
+                        <div class="slider-track" id="schedule-track-dynamic" style="display: flex; transition: transform 0.3s ease; width: 100%;">
+                            <!-- JS Will populate via Sheets Sync -->
+                        </div>
+                    </div>
+
+                    <button class="slider-arrow next" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); z-index: 10; font-size: 3rem; font-weight: 300; background: none; border: none; color: var(--primary-color); cursor: pointer;" onclick="moveDynamicSchedule(1)">&gt;</button>
+                </div>
+
+                <div class="mt-4">
+                    <a href="contact.html" class="btn btn-primary btn-sm">練習試合・体験会申し込み ▼</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MATCH SECTION (NEXT & RESULT) -->
+        <!-- 背景画像: 試合情報セクション背景 -->
+        <section class="match-info-sec" style="background-image: url('images/EDU-11.png');">
+            <div class="match-overlay"></div>
+
+            <div id="next-match-container">
+            <div class="match-block fade-in">
+                <h2 class="match-title">NEXT MATCH</h2>
+                <p class="match-league">TRAINING MATCH</p>
+                <p class="match-date">2026.03.28<span>(土)</span></p>
+                <div class="match-teams">
+                    <div class="team">
+                        <!-- チームロゴ -->
+                        <img src="images/EDU-03.png" alt="EDUMIRAR">
+                    </div>
+                    <div class="match-vs-info">
+                        <p>20:20 KICK OFF</p>
+                        <p class="location">＠ マグフットサルスタジアム</p>
+                    </div>
+                    <div class="team opp-team">
+                        <!-- 対戦相手ロゴ/四角 -->
+                        <div class="white-box"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="result-match-container">
+            <div class="match-block result-block fade-in">
+                <h2 class="match-title">MATCH RESULT</h2>
+                <p class="match-league">TRAINING MATCH</p>
+                <p class="match-date">2026.03.15<span>(日)</span></p>
+                <div class="match-teams">
+                    <div class="team">
+                        <!-- チームロゴ -->
+                        <img src="images/EDU-03.png" alt="EDUMIRAR">
+                    </div>
+                    <div class="match-score">
+                        <p class="score">5-2</p>
+                    </div>
+                    <div class="team opp-team">
+                        <!-- 対戦相手ロゴ/四角 -->
+                        <div class="white-box"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- STAFF / PLAYERS -->
+        <section class="staff-sec bg-white">
+            <div class="container pb-5 pt-5">
+                
+                <div class="staff-heading bg-primary text-white" style="margin-bottom: 20px;">
+                    <h2>選手</h2>
+                </div>
+                
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px;">GOLEIRO</h3>
+                <div class="staff-grid" id="goleiro-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; margin-bottom: 40px;">
+                    <!-- JS will populate Goleiros -->
+                </div>
+
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px;">FIELD PLAYER</h3>
+                <div class="staff-grid" id="field-player-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; margin-bottom: 50px;">
+                    <!-- JS will populate Field Players -->
+                </div>
+
+                <div class="staff-heading bg-primary text-white" style="margin-bottom: 20px;">
+                    <h2>スタッフ</h2>
+                </div>
+                
+                <div class="staff-grid" id="staff-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px;">
+                    <!-- JS will populate Staffs -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Inline Script for dynamic contents -->
+        <script>
+            // Schedule relies on Google Sheets sync
+
+            // --- Player / Staff Grids Setup ---
+            function createCard(role, name) {
+                return `
+                    <div class="staff-card" style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; padding: 10px; text-align: center;">
+                        <img src="images/dummy-avatar.png" onerror="this.src='https://placehold.co/150x150/e0e0e0/999?text=No+Photo'" alt="${role}" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 5px; margin-bottom: 10px;">
+                        <p class="role" style="font-size: 0.7rem; color: var(--primary-color); font-weight: bold; margin: 0;">${role}</p>
+                        <p class="name" style="font-size: 0.9rem; font-weight: bold; margin: 5px 0 0;">${name}</p>
+                    </div>
+                `;
+            }
+
+            document.getElementById('goleiro-grid').innerHTML = 
+                createCard('GOLEIRO', '選手名') + createCard('GOLEIRO', '選手名');
+
+            let fieldPlayersHtml = '';
+            for(let i=0; i<15; i++) {
+                fieldPlayersHtml += createCard('FIELD PLAYER', '選手名');
+            }
+            document.getElementById('field-player-grid').innerHTML = fieldPlayersHtml;
+
+            document.getElementById('staff-grid').innerHTML = 
+                createCard('監督', 'スタッフ名') + 
+                createCard('マネージャー', 'スタッフ名') + 
+                createCard('スタッフ', 'スタッフ名') + 
+                createCard('スタッフ', 'スタッフ名');
+        </script>
+
+    </main>
+
+    <!-- ================= FOOTER (共通) ================= -->
+    <footer class="new-footer">
+        <div class="container">
+            <div class="footer-top-row">
+                <div class="logo-area">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none;">
+                        <img src="images/EDU-02.png" alt="EDUMIRAR" class="logo-icon" style="width: 45px; height: auto;">
+                        <span class="logo-text" style="font-family: var(--font-en); font-weight: 800; font-size: 1.5rem; letter-spacing: 1px;">EDUMIRAR OSAKA</span>
+                    </a>
+                </div>
+                <nav class="footer-nav">
+                    <a href="top-team.html">TOP TEAM</a>
+                    <a href="academy.html">ACADEMY</a>
+                    <a href="partner.html">PARTNER</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="https://www.instagram.com/edumirar_osaka?igsh=d253eTNsYndmdXB6" target="_blank" rel="noopener noreferrer" class="sns-icon" aria-label="Instagram" style="font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
+                </nav>
+            </div>
+
+            <div class="footer-partners-ticker">
+                <div class="ticker-content">
+                    <div class="footer-partner-logo"><img src="images/ラホーム.svg" alt="ラホーム"></div>
+                    <div class="footer-partner-logo"><img src="images/焼鳥スミス.svg" alt="焼鳥スミス"></div>
+                    <div class="footer-partner-logo"><img src="images/ラフテル.svg" alt="ラフテル"></div>
+                    <div class="footer-partner-logo"><img src="images/シャルマン研究所.svg" alt="シャルマン研究所"></div>
+                    <div class="footer-partner-logo"><img src="images/ネオファースト.svg" alt="ネオファースト"></div>
+                    <div class="footer-partner-logo"><img src="images/まさや.svg" alt="まさや"></div>
+                    <div class="footer-partner-logo"><img src="images/山口コスモデンタルクリニック.svg" alt="山口コスモデンタルクリニック"></div>
+                    <div class="footer-partner-logo"><img src="images/小原整骨院.svg" alt="小原整骨院"></div>
+                    <div class="footer-partner-logo"><img src="images/ゴベルナンテ.svg" alt="ゴベルナンテ"></div>
+                    <!-- Duplicate for infinite scroll loop -->
+                    <div class="footer-partner-logo"><img src="images/ラホーム.svg" alt="ラホーム"></div>
+                    <div class="footer-partner-logo"><img src="images/焼鳥スミス.svg" alt="焼鳥スミス"></div>
+                    <div class="footer-partner-logo"><img src="images/ラフテル.svg" alt="ラフテル"></div>
+                    <div class="footer-partner-logo"><img src="images/シャルマン研究所.svg" alt="シャルマン研究所"></div>
+                    <div class="footer-partner-logo"><img src="images/ネオファースト.svg" alt="ネオファースト"></div>
+                    <div class="footer-partner-logo"><img src="images/まさや.svg" alt="まさや"></div>
+                    <div class="footer-partner-logo"><img src="images/山口コスモデンタルクリニック.svg" alt="山口コスモデンタルクリニック"></div>
+                    <div class="footer-partner-logo"><img src="images/小原整骨院.svg" alt="小原整骨院"></div>
+                    <div class="footer-partner-logo"><img src="images/ゴベルナンテ.svg" alt="ゴベルナンテ"></div>
+                </div>
+            </div>
+
+            <div class="copyright" style="text-align: center; margin-top: 30px; font-size: 0.8rem; opacity: 0.7;">
+                &copy; 2026 EDUMIRAR All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/sheets-sync.js"></script>
+</body>
+
+</html>

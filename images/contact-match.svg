@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#333"/>
+  <!-- フットサルコートのライン -->
+  <line x1="0" y1="150" x2="400" y2="150" stroke="#fff" stroke-width="2" stroke-dasharray="10 5" opacity="0.3"/>
+  <!-- 大人2人の足元のシルエット -->
+  <!-- 左の足（ディフェンダー） -->
+  <path d="M100 50 Q120 150 130 250" fill="none" stroke="#ccc" stroke-width="18" stroke-linecap="round"/>
+  <path d="M130 250 Q145 270 160 260" fill="none" stroke="#aaa" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- 右の足（オフェンス・えんじ色） -->
+  <path d="M300 50 Q280 180 250 250" fill="none" stroke="#8e1c3a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M250 250 Q220 270 200 250" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- フットサルボール -->
+  <circle cx="180" cy="240" r="22" fill="#fff"/>
+  <path d="M180 218 L190 230 L180 245 L170 230 Z" fill="#8e1c3a"/>
+
+  <!-- MATCH テキスト -->
+  <text x="200" y="80" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="32" fill="#fff" letter-spacing="2">TRAINING MATCH</text>
+  <text x="200" y="110" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="14" fill="#ccc">ADULT FUTSAL</text>
+</svg>

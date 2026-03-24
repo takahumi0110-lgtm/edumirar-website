@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACADEMY | EDUMIRAR OFFICIAL SITE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @media (min-width: 993px) {
+            .message-flex-reverse {
+                flex-direction: row-reverse;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <!-- ロゴ画像: images/logo.png -->
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="images/EDU-02.png" alt="EDUMIRAR" class="logo-icon">
+                    <span class="logo-text">EDUMIRAR OSAKA</span>
+                </a>
+            </div>
+
+            <!-- PC Navigation -->
+            <nav class="pc-nav">
+                <a href="top-team.html">TOP TEAM</a>
+                <a href="academy.html">ACADEMY</a>
+                <a href="partner.html">PARTNER</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="https://www.instagram.com/edumirar_osaka?igsh=d253eTNsYndmdXB6" target="_blank"
+                    rel="noopener noreferrer" class="sns-icon" aria-label="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-grid">
+            <div class="mobile-menu-block">
+                <h3>TOP TEAM</h3>
+                <ul>
+                    <li><a href="top-team.html">年間スケジュール</a></li>
+                    <li><a href="top-team.html">試合結果</a></li>
+                    <li><a href="top-team.html">メンバー・スタッフ</a></li>
+                    <li><a href="top-team.html">監督挨拶</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-block">
+                <h3>ACADEMY</h3>
+                <ul>
+                    <li><a href="academy.html">コベカツクラブ</a></li>
+                    <li><a href="academy.html">〇〇校</a></li>
+                    <li><a href="academy.html">募集要項</a></li>
+                    <li><a href="academy.html">問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-block">
+                <h3>PARTNER</h3>
+                <ul>
+                    <li><a href="partner.html">法人様向け</a></li>
+                    <li><a href="partner.html">個人の方向け</a></li>
+                    <li><a href="partner.html">活動報告</a></li>
+                    <li><a href="contact.html">問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-block">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li><a href="contact.html">入団・体験</a></li>
+                    <li><a href="contact.html">練習試合申し込み</a></li>
+                    <li><a href="contact.html">スポンサー各種</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <!-- Hero / Top Banner -->
+        <section class="team-hero" style="background-image: url('images/academy-hero-dummy.svg');">
+            <div class="hero-overlay-center">
+                <h1>ACADEMY</h1>
+            </div>
+        </section>
+
+        <!-- LEARNING CRAM SCHOOL SECTION -->
+        <section id="cram" class="message-sec" style="background-color: #f9f9f9;">
+            <div class="container line-heading-container">
+                <h2 class="line-heading">LEARNING CRAM SCHOOL</h2>
+                <p class="feature-head" style="text-align: left; margin-bottom: 40px;">学習塾部門のご紹介</p>
+                <!-- 追加: スライドショーエリア -->
+                <div class="academy-slider-container">
+                    <button class="slider-arrow prev cram-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="academy-slider cram-slider">
+                        <div class="academy-slide active-slide">
+                            <img src="images/cram-school-dummy.svg" alt="LEARNING CRAM SCHOOL 1">
+                        </div>
+                        <div class="academy-slide">
+                            <img src="images/cram-school-dummy.svg" alt="LEARNING CRAM SCHOOL 2">
+                        </div>
+                        <div class="academy-slide">
+                            <img src="images/cram-school-dummy.svg" alt="LEARNING CRAM SCHOOL 3">
+                        </div>
+                    </div>
+                    <button class="slider-arrow next cram-next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+                <div class="message-flex" style="margin-top: 40px;">
+                    <div class="message-right" style="flex: 1; text-align: left;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--primary-color);">
+                            文武両道を目指す、<br>新しい学びの形</h3>
+                        <p>ここには学習塾部門のビジョンや活動方針が入ります。スポーツだけでなく、学習面でもしっかりとサポートし、自ら考える力を養います。</p>
+                        <p>経験豊富な講師陣が一人ひとりのレベルに合わせた丁寧な指導を行い、基礎学力の向上から受験対策まで幅広く対応します。</p>
+                        <ul style="margin-top: 20px; padding-left: 20px; list-style-type: disc;">
+                            <li style="margin-bottom: 10px;">特徴その1：個別の学習進度に合わせたカリキュラム</li>
+                            <li style="margin-bottom: 10px;">特徴その2：部活やスポーツ活動と両立できる柔軟なスケジュール</li>
+                            <li style="margin-bottom: 10px;">特徴その3：実績ある充実したサポート体制</li>
+                        </ul>
+                        <!-- 追加: 申し込みページへの誘導ボタン -->
+                        <div style="margin-top: 30px; text-align: center;">
+                            <a href="contact.html" class="btn btn-primary"
+                                style="padding: 15px 40px; font-size: 1.1rem; width: 80%; max-width: 300px;">学習塾部門へ申し込む</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 追加: 活動実績・活動報告の欄 -->
+                <div class="activity-sec" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #ddd;">
+                    <h3 class="activity-title" style="margin-bottom: 30px;">活動実績・活動報告</h3>
+                    <div class="partner-grid" id="academy-cram-activity-list">
+                        <div
+                            style="background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <img src="https://placehold.co/300x200/eee/999?text=Report+1" alt="Report 1"
+                                style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                            <p style="font-size: 0.85rem; color: #888;">2026.04.15</p>
+                            <h4 style="font-size: 1rem; margin: 5px 0;">春期講習が終了しました</h4>
+                        </div>
+                        <div
+                            style="background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <img src="https://placehold.co/300x200/eee/999?text=Report+2" alt="Report 2"
+                                style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                            <p style="font-size: 0.85rem; color: #888;">2026.03.10</p>
+                            <h4 style="font-size: 1rem; margin: 5px 0;">今年度の合格実績のご報告</h4>
+                        </div>
+                        <div
+                            style="background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <img src="https://placehold.co/300x200/eee/999?text=Report+3" alt="Report 3"
+                                style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                            <p style="font-size: 0.85rem; color: #888;">2026.02.01</p>
+                            <h4 style="font-size: 1rem; margin: 5px 0;">新年度生募集のお知らせ</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KOBEKATSU CLUB SECTION -->
+        <section id="kobekatsu" class="message-sec">
+            <div class="container line-heading-container">
+                <h2 class="line-heading">KOBEKATSU CLUB</h2>
+                <p class="feature-head" style="text-align: left; margin-bottom: 40px;">コベカツクラブ部門のご紹介</p>
+                <!-- 追加: スライドショーエリア -->
+                <div class="academy-slider-container">
+                    <button class="slider-arrow prev kobekatsu-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="academy-slider kobekatsu-slider">
+                        <div class="academy-slide active-slide">
+                            <img src="images/kobekatsu-dummy.svg" alt="KOBEKATSU CLUB 1">
+                        </div>
+                        <div class="academy-slide">
+                            <img src="images/kobekatsu-dummy.svg" alt="KOBEKATSU CLUB 2">
+                        </div>
+                        <div class="academy-slide">
+                            <img src="images/kobekatsu-dummy.svg" alt="KOBEKATSU CLUB 3">
+                        </div>
+                    </div>
+                    <button class="slider-arrow next kobekatsu-next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+                <div class="message-flex" style="margin-top: 40px;">
+                    <div class="message-right" style="flex: 1; text-align: left;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--primary-color);">
+                            個性を大切に育む、<br>放課後クラブ活動</h3>
+                        <p>ここにはコベカツクラブのビジョンや活動内容が入ります。子供たちが自分の興味や関心に合わせて参加できる多彩なプログラムを提供しています。</p>
+                        <p>地域のコミュニティとも連携しながら、社会性や協調性を育む様々な体験学習を通じて、豊かな人間性を形成します。</p>
+                        <ul style="margin-top: 20px; padding-left: 20px; list-style-type: disc;">
+                            <li style="margin-bottom: 10px;">特徴その1：多様な体験プログラムの提供</li>
+                            <li style="margin-bottom: 10px;">特徴その2：地域交流を重視した活動</li>
+                            <li style="margin-bottom: 10px;">特徴その3：安心・安全な放課後の居場所</li>
+                        </ul>
+                        <!-- 追加: 申し込みページへの誘導ボタン -->
+                        <div style="margin-top: 30px; text-align: center;">
+                            <a href="contact.html" class="btn btn-primary"
+                                style="padding: 15px 40px; font-size: 1.1rem; width: 80%; max-width: 300px;">コベカツクラブへ申し込む</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 追加: 活動実績・活動報告の欄 -->
+                <div class="activity-sec" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #ddd;">
+                    <h3 class="activity-title" style="margin-bottom: 30px;">活動実績・活動報告</h3>
+                    <div class="partner-grid" id="academy-kobekatsu-activity-list">
+                        <div
+                            style="background: #f9f9f9; padding: 15px; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <img src="https://placehold.co/300x200/eee/999?text=Report+1" alt="Report 1"
+                                style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                            <p style="font-size: 0.85rem; color: #888;">2026.04.20</p>
+                            <h4 style="font-size: 1rem; margin: 5px 0;">自然体験教室を開催しました</h4>
+                        </div>
+                        <div
+                            style="background: #f9f9f9; padding: 15px; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <img src="https://placehold.co/300x200/eee/999?text=Report+2" alt="Report 2"
+                                style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                            <p style="font-size: 0.85rem; color: #888;">2026.03.25</p>
+                            <h4 style="font-size: 1rem; margin: 5px 0;">地域清掃ボランティア活動報告</h4>
+                        </div>
+                        <div
+                            style="background: #f9f9f9; padding: 15px; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <img src="https://placehold.co/300x200/eee/999?text=Report+3" alt="Report 3"
+                                style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                            <p style="font-size: 0.85rem; color: #888;">2026.02.15</p>
+                            <h4 style="font-size: 1rem; margin: 5px 0;">工作ワークショップの様子</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="new-footer">
+        <div class="container">
+            <div class="footer-top-row">
+                <div class="logo-area">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none;">
+                        <img src="images/EDU-02.png" alt="EDUMIRAR" class="logo-icon" style="width: 45px; height: auto;">
+                        <span class="logo-text" style="font-family: var(--font-en); font-weight: 800; font-size: 1.5rem; letter-spacing: 1px;">EDUMIRAR OSAKA</span>
+                    </a>
+                </div>
+                <nav class="footer-nav">
+                    <a href="top-team.html">TOP TEAM</a>
+                    <a href="academy.html">ACADEMY</a>
+                    <a href="partner.html">PARTNER</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="https://www.instagram.com/edumirar_osaka?igsh=d253eTNsYndmdXB6" target="_blank" rel="noopener noreferrer" class="sns-icon" aria-label="Instagram" style="font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
+                </nav>
+            </div>
+
+            <div class="footer-partners-ticker">
+                <div class="ticker-content">
+                    <div class="footer-partner-logo"><img src="images/ラホーム.svg" alt="ラホーム"></div>
+                    <div class="footer-partner-logo"><img src="images/焼鳥スミス.svg" alt="焼鳥スミス"></div>
+                    <div class="footer-partner-logo"><img src="images/ラフテル.svg" alt="ラフテル"></div>
+                    <div class="footer-partner-logo"><img src="images/シャルマン研究所.svg" alt="シャルマン研究所"></div>
+                    <div class="footer-partner-logo"><img src="images/ネオファースト.svg" alt="ネオファースト"></div>
+                    <div class="footer-partner-logo"><img src="images/まさや.svg" alt="まさや"></div>
+                    <div class="footer-partner-logo"><img src="images/山口コスモデンタルクリニック.svg" alt="山口コスモデンタルクリニック"></div>
+                    <div class="footer-partner-logo"><img src="images/小原整骨院.svg" alt="小原整骨院"></div>
+                    <div class="footer-partner-logo"><img src="images/ゴベルナンテ.svg" alt="ゴベルナンテ"></div>
+                    <!-- Duplicate for infinite scroll loop -->
+                    <div class="footer-partner-logo"><img src="images/ラホーム.svg" alt="ラホーム"></div>
+                    <div class="footer-partner-logo"><img src="images/焼鳥スミス.svg" alt="焼鳥スミス"></div>
+                    <div class="footer-partner-logo"><img src="images/ラフテル.svg" alt="ラフテル"></div>
+                    <div class="footer-partner-logo"><img src="images/シャルマン研究所.svg" alt="シャルマン研究所"></div>
+                    <div class="footer-partner-logo"><img src="images/ネオファースト.svg" alt="ネオファースト"></div>
+                    <div class="footer-partner-logo"><img src="images/まさや.svg" alt="まさや"></div>
+                    <div class="footer-partner-logo"><img src="images/山口コスモデンタルクリニック.svg" alt="山口コスモデンタルクリニック"></div>
+                    <div class="footer-partner-logo"><img src="images/小原整骨院.svg" alt="小原整骨院"></div>
+                    <div class="footer-partner-logo"><img src="images/ゴベルナンテ.svg" alt="ゴベルナンテ"></div>
+                </div>
+            </div>
+
+            <div class="copyright" style="text-align: center; margin-top: 30px; font-size: 0.8rem; opacity: 0.7;">
+                &copy; 2026 EDUMIRAR All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/sheets-sync.js"></script>
+</body>
+
+</html>
