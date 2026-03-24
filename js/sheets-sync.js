@@ -240,43 +240,67 @@ async function renderActivityReports() {
         if (container) container.innerHTML = '';
     });
 
+    // 日付の新しい順（降順）に並び替え
+    data.sort((a, b) => {
+        const dateA = new Date(a['日付'] || 0);
+        const dateB = new Date(b['日付'] || 0);
+        return dateB - dateA;
+    });
+
+    // カテゴリごとに6件までフィルタリング
+    const groupedData = {
+        'ACADEMY学習塾': [],
+        'ACADEMYコベカツ': [],
+        'PARTNER': []
+    };
+
     data.forEach(item => {
         const targetPage = item['表示先ページ'];
+        if (groupedData[targetPage] && groupedData[targetPage].length < 6) {
+            groupedData[targetPage].push(item);
+        }
+    });
+
+    Object.keys(groupedData).forEach(targetPage => {
         const container = lists[targetPage];
         if (container) {
-            const dateStr = item['日付'] || '';
-            const title = item['タイトル'] || '';
-            let imgUrl = item['画像URL'] || `https://placehold.co/300x200/eee/999?text=No+Image`;
-            imgUrl = convertDriveUrlToImageLink(imgUrl);
-            const linkUrl = item['リンク先URL'] || '';
+            groupedData[targetPage].forEach(item => {
+                const dateStr = item['日付'] || '';
+                const title = item['タイトル'] || '';
+                let imgUrl = item['画像URL'] || `https://placehold.co/300x200/eee/999?text=No+Image`;
+                imgUrl = convertDriveUrlToImageLink(imgUrl);
+                const linkUrl = item['リンク先URL'] || '';
 
-            const card = document.createElement(linkUrl ? 'a' : 'div');
-            if (linkUrl) {
-                card.href = linkUrl;
-                card.target = '_blank';
-            }
-            card.className = 'activity-card';
-            card.style.display = 'block';
-            card.style.textDecoration = 'none';
-            card.style.color = 'inherit';
-            card.style.background = '#fff';
-            card.style.borderRadius = '8px';
-            card.style.overflow = 'hidden';
-            card.style.boxShadow = '0 3px 10px rgba(0,0,0,0.1)';
-            card.style.transition = 'transform 0.2s';
-            card.onmouseover = () => card.style.transform = 'translateY(-5px)';
-            card.onmouseout = () => card.style.transform = 'translateY(0)';
+                const card = document.createElement(linkUrl ? 'a' : 'div');
+                if (linkUrl) {
+                    card.href = linkUrl;
+                    card.target = '_blank';
+                }
+                card.className = 'activity-card';
+                card.style.display = 'flex';
+                card.style.flexDirection = 'column';
+                card.style.height = '100%';
+                card.style.textDecoration = 'none';
+                card.style.color = 'inherit';
+                card.style.background = '#fff';
+                card.style.borderRadius = '8px';
+                card.style.overflow = 'hidden';
+                card.style.boxShadow = '0 3px 10px rgba(0,0,0,0.1)';
+                card.style.transition = 'transform 0.2s';
+                card.onmouseover = () => card.style.transform = 'translateY(-5px)';
+                card.onmouseout = () => card.style.transform = 'translateY(0)';
 
-            card.innerHTML = `
-                <div style="height: 150px; overflow: hidden;">
-                    <img src="${imgUrl}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 15px;">
-                    <p style="font-size: 0.8rem; color: #666; margin-bottom: 5px;">${dateStr}</p>
-                    <h4 style="font-size: 1rem; margin: 0; line-height: 1.4;">${title}</h4>
-                </div>
-            `;
-            container.appendChild(card);
+                card.innerHTML = `
+                    <div style="height: 180px; width: 100%; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #eee;">
+                        <img src="${imgUrl}" alt="${title}" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div style="padding: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+                        <p style="font-size: 0.8rem; color: #666; margin: 0 0 8px 0;">${dateStr}</p>
+                        <h4 style="font-size: 1rem; color: #333; margin: 0; line-height: 1.4; font-weight: bold;">${title}</h4>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
         }
     });
 
