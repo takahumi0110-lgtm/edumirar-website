@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    window.fadeObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                window.fadeObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    fadeElements.forEach(el => observer.observe(el));
+    fadeElements.forEach(el => window.fadeObserver.observe(el));
 
     // Initialize Academy Sliders if they exist on the page
     initAcademySlider('.cram-slider', '.cram-prev', '.cram-next');

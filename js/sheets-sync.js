@@ -123,6 +123,16 @@ async function renderMatchData() {
             </div>
         `;
     }
+
+    // Apply fade-in observation to new elements
+    if (window.fadeObserver) {
+        if (nextMatchContainer) {
+            nextMatchContainer.querySelectorAll('.fade-in').forEach(el => window.fadeObserver.observe(el));
+        }
+        if (resultMatchContainer) {
+            resultMatchContainer.querySelectorAll('.fade-in').forEach(el => window.fadeObserver.observe(el));
+        }
+    }
 }
 
 async function renderRankingData() {
