@@ -1,10 +1,21 @@
 // Google Sheets CSV Export URLs
+const docId = '189GI0dChhY3RRvG-pG9s7T5XkLpCJGAy9iKBqislzfY';
 const SHEET_URLS = {
-    MATCH_DATA: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2Enc--6H5oD2PAu7rPxAxlugvMnZLE7p8aNeZaJJPz_jbeExEY8D2wXTSNdvPgF4ToZof6rD2kDBa/pub?gid=923604561&single=true&output=csv',
-    RANKING: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2Enc--6H5oD2PAu7rPxAxlugvMnZLE7p8aNeZaJJPz_jbeExEY8D2wXTSNdvPgF4ToZof6rD2kDBa/pub?gid=523505222&single=true&output=csv',
-    SCHEDULE: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2Enc--6H5oD2PAu7rPxAxlugvMnZLE7p8aNeZaJJPz_jbeExEY8D2wXTSNdvPgF4ToZof6rD2kDBa/pub?gid=1579402973&single=true&output=csv',
-    ACTIVITY: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2Enc--6H5oD2PAu7rPxAxlugvMnZLE7p8aNeZaJJPz_jbeExEY8D2wXTSNdvPgF4ToZof6rD2kDBa/pub?gid=1036375062&single=true&output=csv'
+    MATCH_DATA: `https://docs.google.com/spreadsheets/d/${docId}/export?format=csv&gid=923604561`,
+    RANKING:    `https://docs.google.com/spreadsheets/d/${docId}/export?format=csv&gid=523505222`,
+    SCHEDULE:   `https://docs.google.com/spreadsheets/d/${docId}/export?format=csv&gid=1579402973`,
+    ACTIVITY:   `https://docs.google.com/spreadsheets/d/${docId}/export?format=csv&gid=1036375062`
 };
+
+// Helper: Convert Google Drive View URL to Direct Image URL
+function convertDriveUrlToImageLink(url) {
+    if (!url) return '';
+    const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+    if (match && match[1]) {
+        return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+    }
+    return url;
+}
 
 // Simple CSV Parser
 function parseCSV(csvText) {
@@ -73,7 +84,7 @@ async function renderMatchData() {
     const resultMatchData = data.find(row => row['区分'] === 'MATCH RESULT');
 
     if (nextMatchContainer && nextMatchData) {
-        const logoUrl = nextMatchData['相手ロゴ画像URL'] ? nextMatchData['相手ロゴ画像URL'] : 'https://placehold.co/100x100/f0f0f0/999?text=Away';
+        const logoUrl = nextMatchData['相手ロゴ画像URL'] ? convertDriveUrlToImageLink(nextMatchData['相手ロゴ画像URL']) : 'https://placehold.co/100x100/f0f0f0/999?text=Away';
         const dateStr = nextMatchData['日付'] ? nextMatchData['日付'] : 'TBD';
         const timeStr = nextMatchData['キックオフ時間'] ? nextMatchData['キックオフ時間'] + ' KICK OFF' : 'Time TBD';
         
@@ -99,7 +110,7 @@ async function renderMatchData() {
     }
 
     if (resultMatchContainer && resultMatchData) {
-        const logoUrl = resultMatchData['相手ロゴ画像URL'] ? resultMatchData['相手ロゴ画像URL'] : 'https://placehold.co/100x100/f0f0f0/999?text=Away';
+        const logoUrl = resultMatchData['相手ロゴ画像URL'] ? convertDriveUrlToImageLink(resultMatchData['相手ロゴ画像URL']) : 'https://placehold.co/100x100/f0f0f0/999?text=Away';
         const dateStr = resultMatchData['日付'] ? resultMatchData['日付'] : 'TBD';
         const myScore = resultMatchData['自チームスコア'] || '0';
         const oppScore = resultMatchData['相手チームスコア'] || '0';
@@ -174,7 +185,8 @@ async function renderScheduleData() {
     
     data.forEach(item => {
         const dateStr = item['年月'] || '';
-        const imgUrl = item['画像URL'] || `https://placehold.co/400x500/fff/333?text=${dateStr}+Schedule`;
+        let imgUrl = item['画像URL'] || `https://placehold.co/400x500/fff/333?text=${dateStr}+Schedule`;
+        imgUrl = convertDriveUrlToImageLink(imgUrl);
         
         trackHtml += `
             <div class="slide-item" style="flex: 1 0 ${100/totalSchedules}%; text-align: center; padding: 0 10px;">
@@ -233,12 +245,15 @@ async function renderActivityReports() {
         if (container) {
             const dateStr = item['日付'] || '';
             const title = item['タイトル'] || '';
-            const imgUrl = item['画像URL'] || `https://placehold.co/300x200/eee/999?text=No+Image`;
-            const linkUrl = item['リンク先URL'] || '#';
+            let imgUrl = item['画像URL'] || `https://placehold.co/300x200/eee/999?text=No+Image`;
+            imgUrl = convertDriveUrlToImageLink(imgUrl);
+            const linkUrl = item['リンク先URL'] || '';
 
-            const card = document.createElement('a');
-            card.href = linkUrl;
-            card.target = '_blank';
+            const card = document.createElement(linkUrl ? 'a' : 'div');
+            if (linkUrl) {
+                card.href = linkUrl;
+                card.target = '_blank';
+            }
             card.className = 'activity-card';
             card.style.display = 'block';
             card.style.textDecoration = 'none';
