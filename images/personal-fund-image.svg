@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a10;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d0d1c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="camGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e8e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b0b0b0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lensGrad" cx="40%" cy="40%" r="60%" fx="35%" fy="35%" id="lensGrad" gradientUnits="objectBoundingBox">
+      <stop offset="0%" style="stop-color:#5599dd;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1155aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003388;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="lensRadial" cx="40%" cy="40%" r="60%" fx="35%" fy="35%">
+      <stop offset="0%" style="stop-color:#88bbff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#2266cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#001155;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Field lines (stylized) -->
+  <ellipse cx="200" cy="280" rx="180" ry="40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+  <ellipse cx="200" cy="280" rx="130" ry="28" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+  <line x1="200" y1="240" x2="200" y2="300" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Stars/sparkles -->
+  <circle cx="50" cy="40" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="120" cy="20" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="320" cy="15" r="1.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="370" cy="55" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="30" cy="120" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="380" cy="100" r="1.5" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Main camera body (veo style - elongated oval) -->
+  <ellipse cx="200" cy="145" rx="110" ry="38" fill="url(#camGrad)" rx="110" ry="38"/>
+  
+  <!-- Camera body detail -->
+  <ellipse cx="200" cy="145" rx="108" ry="36" fill="none" stroke="#c0c0c0" stroke-width="1"/>
+  
+  <!-- Lens (left side) -->
+  <circle cx="118" cy="145" r="28" fill="#2a2a2a"/>
+  <circle cx="118" cy="145" r="24" fill="url(#lensRadial)"/>
+  <circle cx="118" cy="145" r="18" fill="#1144aa" opacity="0.9"/>
+  <circle cx="118" cy="145" r="12" fill="#0033880"/>
+  <circle cx="113" cy="140" r="4" fill="#ffffff" opacity="0.3"/>
+  <circle cx="112" cy="139" r="2" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Lens (right side) -->
+  <circle cx="282" cy="145" r="28" fill="#2a2a2a"/>
+  <circle cx="282" cy="145" r="24" fill="url(#lensRadial)"/>
+  <circle cx="282" cy="145" r="18" fill="#1144aa" opacity="0.9"/>
+  <circle cx="282" cy="145" r="12" fill="#003388"/>
+  <circle cx="277" cy="140" r="4" fill="#ffffff" opacity="0.3"/>
+  <circle cx="276" cy="139" r="2" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Camera body center -->
+  <rect x="130" y="128" width="140" height="34" rx="5" fill="#d0d0d0"/>
+  
+  <!-- Logo/brand area -->
+  <rect x="150" y="133" width="100" height="24" rx="3" fill="#1a0a10"/>
+  <text x="200" y="149" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" letter-spacing="2">VEO</text>
+
+  <!-- Mount/tripod suggestion -->
+  <rect x="192" y="183" width="16" height="35" rx="3" fill="#909090"/>
+  <ellipse cx="200" cy="218" rx="30" ry="6" fill="#707070"/>
+
+  <!-- Recording indicator - glowing red dot -->
+  <circle cx="320" cy="130" r="6" fill="#ff3333" filter="url(#glow)"/>
+  <circle cx="320" cy="130" r="4" fill="#ff6666"/>
+  <circle cx="318" cy="128" r="1.5" fill="#ffaaaa" opacity="0.8"/>
+
+  <!-- Signal waves -->
+  <path d="M 338 120 Q 348 130 338 140" stroke="#ff3333" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 345 115 Q 360 130 345 145" stroke="#ff3333" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M 352 110 Q 372 130 352 150" stroke="#ff3333" stroke-width="1.5" fill="none" opacity="0.2"/>
+
+  <!-- Soccer ball (small, stylized) -->
+  <circle cx="72" cy="210" r="25" fill="#ffffff"/>
+  <polygon points="72,185 83,196 78,210 66,210 61,196" fill="#333333" opacity="0.8"/>
+  <polygon points="47,200 58,196 61,210 52,220 41,214" fill="#333333" opacity="0.8"/>
+  <polygon points="97,200 86,196 83,210 92,220 103,214" fill="#333333" opacity="0.8"/>
+  <circle cx="72" cy="210" r="25" fill="none" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- Text: LIVE CAMERA -->
+  <text x="200" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" opacity="0.8" letter-spacing="3">LIVE CAMERA</text>
+  
+  <!-- Text: PROJECT -->
+  <text x="200" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e5b5c5" opacity="0.9" letter-spacing="2">CROWDFUNDING PROJECT</text>
+
+  <!-- Decorative lines -->
+  <line x1="60" y1="250" x2="140" y2="250" stroke="#8e1c3a" stroke-width="1" opacity="0.5"/>
+  <line x1="260" y1="250" x2="340" y2="250" stroke="#8e1c3a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Top accent line -->
+  <rect x="170" y="12" width="60" height="3" rx="1.5" fill="#8e1c3a"/>
+  
+  <!-- Corner accents -->
+  <path d="M 15 15 L 15 30 M 15 15 L 30 15" stroke="#8e1c3a" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 385 15 L 385 30 M 385 15 L 370 15" stroke="#8e1c3a" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 15 285 L 15 270 M 15 285 L 30 285" stroke="#8e1c3a" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 385 285 L 385 270 M 385 285 L 370 285" stroke="#8e1c3a" stroke-width="1.5" fill="none" opacity="0.6"/>
+</svg>
