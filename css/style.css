@@ -286,8 +286,9 @@ header {
     background-color: var(--primary-color);
     z-index: 1050;
     transition: var(--transition);
-    padding: 80px 20px 40px;
-    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
 }
 
@@ -296,25 +297,46 @@ header {
     opacity: 1;
 }
 
-.mobile-menu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0 30px;
 }
 
-.mobile-menu-block h3 {
-    color: var(--text-light);
-    font-size: 1.1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+.mobile-menu-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: #ffffff;
+    font-family: var(--font-en);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    padding: 16px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: opacity 0.2s ease;
 }
 
-.mobile-menu-block ul li a {
-    display: block;
-    color: var(--text-light);
-    padding: 8px 0;
-    font-size: 0.9rem;
+.mobile-menu-nav a:hover {
+    opacity: 0.7;
+}
+
+.mobile-menu-nav a:last-child {
+    border-bottom: none;
+    margin-top: 10px;
+}
+
+.mobile-menu-nav a.sns-mobile {
+    font-size: 2rem;
+    border-bottom: none;
+    width: auto;
+    padding: 10px 20px;
 }
 
 .main-content {
