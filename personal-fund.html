@@ -335,9 +335,9 @@
         .pf-passion {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
             color: #fff;
-            text-align: center;
             position: relative;
             overflow: hidden;
+            text-align: left; /* 統一のため左寄せ */
         }
 
         .pf-passion::before {
@@ -461,8 +461,8 @@
         .pf-cta {
             background: linear-gradient(135deg, #1a0a10 0%, #2a0d15 100%);
             color: #fff;
-            text-align: center;
             padding: 120px 0;
+            text-align: left; /* 統一のため左寄せ */
         }
 
         .pf-cta .pf-section-title {
@@ -680,6 +680,31 @@
             color: var(--primary-color);
             font-size: 1.1rem;
         }
+
+        /* Floating CTA */
+        .pf-floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+
+        .pf-floating-cta .btn-pf-main {
+            padding: 15px 30px;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        @media screen and (max-width: 600px) {
+            .pf-floating-cta {
+                bottom: 20px;
+                right: 20px;
+            }
+            .pf-floating-cta .btn-pf-main {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -861,39 +886,30 @@
         <!-- ===== 出資特典 ===== -->
         <section class="pf-section pf-benefits" id="benefits">
             <div class="container">
-                <div style="text-align: center;">
+                <div style="text-align: left;">
                     <span class="pf-section-label">BENEFITS</span>
                     <h2 class="pf-section-title">出資特典</h2>
-                    <div class="pf-divider" style="margin: 0 auto 20px;"></div>
-                    <p style="color: #666; max-width: 600px; margin: 0 auto; font-size: 0.98rem; line-height: 1.7;">出資いただいた皆様に、感謝の気持ちを込めた特典をご用意しています。</p>
+                    <div class="pf-divider"></div>
+                    <p style="color: #666; max-width: 600px; font-size: 0.98rem; line-height: 1.7;">出資いただいた皆様に、感謝の気持ちを込めた特典をご用意しています。</p>
                 </div>
 
-                <div class="pf-benefits-grid">
+                <div class="pf-benefits-grid" style="grid-template-columns: repeat(2, 1fr);">
                     <div class="pf-benefit-card">
-                        <span class="pf-benefit-tag">¥1,000〜</span>
+                        <span class="pf-benefit-tag">¥30,000コース</span>
                         <div class="pf-benefit-icon">
-                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-video"></i>
                         </div>
-                        <h3>応援コース</h3>
-                        <p>サンクスメール＋チームSNSでのお名前掲載（希望者のみ）。あなたの気持ちがチームの力になります。</p>
+                        <h3>試合映像＆限定映像</h3>
+                        <p>試合映像や、ここでしか見られない特別な映像をご提供いたします。</p>
                     </div>
 
                     <div class="pf-benefit-card">
-                        <span class="pf-benefit-tag">¥3,000〜</span>
+                        <span class="pf-benefit-tag">¥50,000コース</span>
                         <div class="pf-benefit-icon">
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-shirt"></i>
                         </div>
-                        <h3>サポーターコース</h3>
-                        <p>試合配信URLの優先案内＋専用サポーターカード（デジタル）。試合を真っ先に楽しんでいただけます。</p>
-                    </div>
-
-                    <div class="pf-benefit-card">
-                        <span class="pf-benefit-tag">¥10,000〜</span>
-                        <div class="pf-benefit-icon">
-                            <i class="fa-solid fa-trophy"></i>
-                        </div>
-                        <h3>プレミアムコース</h3>
-                        <p>上記すべて＋練習見学への招待＋チームユニフォームへのお名前掲載（希望者のみ）。チームの一員として。</p>
+                        <h3>映像＋練習着</h3>
+                        <p>30,000円コースの特典（全映像）に加え、チームの公式練習着をプレゼントいたします。</p>
                     </div>
                 </div>
             </div>
@@ -904,7 +920,7 @@
             <div class="container">
                 <div class="pf-team-grid">
                     <div class="pf-team-img">
-                        <img src="images/EDU-11.png" alt="EDUMIRAR チーム">
+                        <img src="images/EDU-08.png" alt="EDUMIRAR チーム">
                     </div>
                     <div class="pf-team-text">
                         <span class="pf-section-label">ABOUT US</span>
@@ -922,10 +938,10 @@
         <!-- ===== FAQ ===== -->
         <section class="pf-section pf-faq" id="faq">
             <div class="container">
-                <div style="text-align: center;">
+                <div style="text-align: left;">
                     <span class="pf-section-label">FAQ</span>
                     <h2 class="pf-section-title">よくある質問</h2>
-                    <div class="pf-divider" style="margin: 0 auto;"></div>
+                    <div class="pf-divider"></div>
                 </div>
 
                 <div class="pf-faq-list">
@@ -971,6 +987,14 @@
         </section>
 
     </main>
+
+    <!-- Floating CTA -->
+    <div class="pf-floating-cta">
+        <a href="https://edumirar.base.shop" target="_blank" rel="noopener noreferrer" class="btn-pf-main">
+            <i class="fa-solid fa-heart"></i>
+            出資する
+        </a>
+    </div>
 
     <!-- ================= FOOTER (共通) ================= -->
     <footer class="new-footer">

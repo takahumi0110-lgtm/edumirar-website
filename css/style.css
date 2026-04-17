@@ -1126,8 +1126,9 @@ header {
 
 .hero-maintext {
     font-family: var(--font-en);
-    font-size: 4rem;
+    font-size: min(12vw, 4rem);
     font-weight: 900;
+    white-space: nowrap; /* 強制的に1行にする */
 }
 
 .hero-img-right {
