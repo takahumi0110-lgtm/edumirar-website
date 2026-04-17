@@ -183,8 +183,15 @@
         }
 
         @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(6px); }
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(6px);
+            }
         }
 
         /* Section共通 */
@@ -337,13 +344,17 @@
             color: #fff;
             position: relative;
             overflow: hidden;
-            text-align: left; /* 統一のため左寄せ */
+            text-align: left;
+            /* 統一のため左寄せ */
         }
 
         .pf-passion::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('images/EDU-08.svg');
             background-size: cover;
             background-position: center;
@@ -462,7 +473,8 @@
             background: linear-gradient(135deg, #1a0a10 0%, #2a0d15 100%);
             color: #fff;
             padding: 120px 0;
-            text-align: left; /* 統一のため左寄せ */
+            text-align: left;
+            /* 統一のため左寄せ */
         }
 
         .pf-cta .pf-section-title {
@@ -606,6 +618,7 @@
 
         /* Responsive */
         @media screen and (max-width: 900px) {
+
             .pf-why-grid,
             .pf-veo-inner,
             .pf-team-grid {
@@ -666,7 +679,9 @@
         }
 
         @keyframes progressFill {
-            to { width: 35%; }
+            to {
+                width: 35%;
+            }
         }
 
         .pf-progress-stats {
@@ -692,14 +707,15 @@
         .pf-floating-cta .btn-pf-main {
             padding: 15px 30px;
             font-size: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         @media screen and (max-width: 600px) {
             .pf-floating-cta {
                 bottom: 20px;
                 right: 20px;
             }
+
             .pf-floating-cta .btn-pf-main {
                 padding: 12px 20px;
                 font-size: 0.9rem;
@@ -742,7 +758,9 @@
             <a href="academy.html">ACADEMY</a>
             <a href="partner.html">PARTNER</a>
             <a href="contact.html">CONTACT</a>
-            <a href="https://www.instagram.com/edumirar_osaka?igsh=d253eTNsYndmdXB6" target="_blank" rel="noopener noreferrer" class="sns-mobile" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/edumirar_osaka?igsh=d253eTNsYndmdXB6" target="_blank"
+                rel="noopener noreferrer" class="sns-mobile" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
         </nav>
     </div>
 
@@ -770,7 +788,8 @@
                 </p>
 
                 <div class="pf-hero-cta">
-                    <a href="https://edumirar.base.shop" target="_blank" rel="noopener noreferrer" class="btn-pf-main" id="hero-cta-base">
+                    <a href="https://edumirar.base.shop" target="_blank" rel="noopener noreferrer" class="btn-pf-main"
+                        id="hero-cta-base">
                         <i class="fa-solid fa-heart"></i>
                         今すぐ出資する（BASE）
                     </a>
@@ -890,7 +909,8 @@
                     <span class="pf-section-label">BENEFITS</span>
                     <h2 class="pf-section-title">出資特典</h2>
                     <div class="pf-divider"></div>
-                    <p style="color: #666; max-width: 600px; font-size: 0.98rem; line-height: 1.7;">出資いただいた皆様に、感謝の気持ちを込めた特典をご用意しています。</p>
+                    <p style="color: #666; max-width: 600px; font-size: 0.98rem; line-height: 1.7;">
+                        出資いただいた皆様に、感謝の気持ちを込めた特典をご用意しています。</p>
                 </div>
 
                 <div class="pf-benefits-grid" style="grid-template-columns: repeat(2, 1fr);">
@@ -926,10 +946,11 @@
                         <span class="pf-section-label">ABOUT US</span>
                         <h2>EDUMIRAR OSAKA<br>というチーム</h2>
                         <div class="pf-divider"></div>
-                        <p>「应援される」——その言葉を胸に、2024年大阪で誕生したフットサルクラブ。</p>
+                        <p>「応援される」——その言葉を胸に、2024年大阪で誕生したフットサルクラブ。</p>
                         <p>Fリーグ経験を持つ監督のもと、全員が社会人として働きながら週複数回の練習を欠かさない。練習の質、試合への準備、すべてにこだわっています。</p>
                         <p>フットサルという競技を、もっと多くの人に知ってもらいたい。地域のリーグを盛り上げたい。そのためにも、veoカメラは私たちにとって大きな一歩となります。</p>
-                        <a href="top-team.html" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">チームを見る →</a>
+                        <a href="top-team.html" class="btn btn-primary"
+                            style="margin-top: 20px; display: inline-block;">チームを見る →</a>
                     </div>
                 </div>
             </div>
@@ -947,7 +968,8 @@
                 <div class="pf-faq-list">
                     <div class="pf-faq-item">
                         <div class="pf-faq-q">BASEからの購入方法を教えてください。</div>
-                        <div class="pf-faq-a">「今すぐ出資する」ボタンをクリックすると、BASEの購入ページに移動します。BASEアカウントをお持ちでない方もゲスト購入が可能です。希望のコースを選んでご購入ください。</div>
+                        <div class="pf-faq-a">
+                            「今すぐ出資する」ボタンをクリックすると、BASEの購入ページに移動します。BASEアカウントをお持ちでない方もゲスト購入が可能です。希望のコースを選んでご購入ください。</div>
                     </div>
                     <div class="pf-faq-item">
                         <div class="pf-faq-q">お名前掲載は任意ですか？</div>
@@ -977,7 +999,8 @@
                 <p>ひとりひとりの出資が、EDUMIRAR OSAKAの力になります。<br>veoカメラ導入で、チームと地域のフットサルをもっと盛り上げましょう。</p>
 
                 <div class="pf-cta-buttons">
-                    <a href="https://edumirar.base.shop" target="_blank" rel="noopener noreferrer" class="btn-pf-base" id="cta-base-link">
+                    <a href="https://edumirar.base.shop" target="_blank" rel="noopener noreferrer" class="btn-pf-base"
+                        id="cta-base-link">
                         <i class="fa-solid fa-shopping-cart"></i>
                         BASEで出資する
                     </a>
@@ -1001,9 +1024,13 @@
         <div class="container">
             <div class="footer-top-row">
                 <div class="logo-area">
-                    <a href="index.html" style="display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none;">
-                        <img src="images/EDU-02.png" alt="EDUMIRAR" class="logo-icon" style="width: 45px; height: auto;">
-                        <span class="logo-text" style="font-family: var(--font-en); font-weight: 800; font-size: 1.5rem; letter-spacing: 1px;">EDUMIRAR OSAKA</span>
+                    <a href="index.html"
+                        style="display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none;">
+                        <img src="images/EDU-02.png" alt="EDUMIRAR" class="logo-icon"
+                            style="width: 45px; height: auto;">
+                        <span class="logo-text"
+                            style="font-family: var(--font-en); font-weight: 800; font-size: 1.5rem; letter-spacing: 1px;">EDUMIRAR
+                            OSAKA</span>
                     </a>
                 </div>
                 <nav class="footer-nav">
@@ -1011,7 +1038,9 @@
                     <a href="academy.html">ACADEMY</a>
                     <a href="partner.html">PARTNER</a>
                     <a href="contact.html">CONTACT</a>
-                    <a href="https://www.instagram.com/edumirar_osaka?igsh=d253eTNsYndmdXB6" target="_blank" rel="noopener noreferrer" class="sns-icon" aria-label="Instagram" style="font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/edumirar_osaka?igsh=d253eTNsYndmdXB6" target="_blank"
+                        rel="noopener noreferrer" class="sns-icon" aria-label="Instagram" style="font-size: 1.5rem;"><i
+                            class="fa-brands fa-instagram"></i></a>
                 </nav>
             </div>
 
