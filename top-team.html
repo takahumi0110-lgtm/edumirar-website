@@ -194,14 +194,14 @@
                     <h2>選手</h2>
                 </div>
                 
-                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px;">GOLEIRO</h3>
-                <div class="staff-grid" id="goleiro-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-bottom: 40px;">
-                    <!-- JS will populate Goleiros -->
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px;">FIELD PLAYER</h3>
+                <div class="staff-grid" id="field-player-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-bottom: 40px;">
+                    <!-- JS will populate Field Players -->
                 </div>
 
-                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px;">FIELD PLAYER</h3>
-                <div class="staff-grid" id="field-player-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-bottom: 50px;">
-                    <!-- JS will populate Field Players -->
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 15px;">GOLEIRO</h3>
+                <div class="staff-grid" id="goleiro-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-bottom: 50px;">
+                    <!-- JS will populate Goleiros -->
                 </div>
 
                 <div class="staff-heading bg-primary text-white" style="margin-bottom: 20px;">
@@ -245,23 +245,30 @@
                 `;
             }
 
-            // Goleiro（GK）
-            document.getElementById('goleiro-grid').innerHTML = 
-                createPlayerCard('17', '近藤 暁', 'GOLEIRO', '全力で守ってチームを支えます！', 'images/member/17 GL 近藤暁.jpg') + 
-                createPlayerCard('23', '福田 真也', 'GOLEIRO', 'しっかりゴールを守り抜きます！', 'images/member/23 GL 福田真也.jpg');
-
-            // Field Players
+            // Field Players（FP）
             document.getElementById('field-player-grid').innerHTML =
+                createPlayerCard('4', '柏木 孝文', 'FIELD PLAYER', 'チームのために全力でプレーします！', 'images/member/4 FP 柏木孝文.jpg') +
                 createPlayerCard('7', '當眞 功基', 'FIELD PLAYER', 'チームのために全力でプレーします！', 'images/member/7 FP 當眞功基.jpg') +
+                createPlayerCard('8', '川戸 渉平', 'FIELD PLAYER', '全力で勝利を掴みます！', 'images/member/8 FP 川戸渉平.jpg') +
+                createPlayerCard('9', '川上 将司', 'FIELD PLAYER', '仲間と共に戦います！', 'images/member/9 FP 川上将司.jpg') +
+                createPlayerCard('10', '荒本 恭志', 'FIELD PLAYER', '気持ちで勝ちにいきます！', 'images/member/10 FP 荒本恭志.jpg') +
                 createPlayerCard('11', '井上 健太', 'FIELD PLAYER', '気合いで戦います！', 'images/member/11 FP 井上健太.jpg') +
                 createPlayerCard('12', '三好 翔馬', 'FIELD PLAYER', '勝利のために全力を尽くします！', 'images/member/12 FP 三好翔馬.jpg') +
                 createPlayerCard('14', '深津 亮', 'FIELD PLAYER', 'チームの勝利のために！', 'images/member/14 FP 深津亮.jpg') +
                 createPlayerCard('20', '山口 剛', 'FIELD PLAYER', '仲間と共に頂点を目指します！', 'images/member/20 FP 山口剛.jpg') +
+                createPlayerCard('22', '熊取谷 卓馬', 'FIELD PLAYER', '全力でチームを盛り上げます！', 'images/member/22 FP 熊取谷卓馬.jpg') +
+                createPlayerCard('55', '十川 凜生', 'FIELD PLAYER', 'チームの勝利に貢献します！', 'images/member/55 FP 十川凜生.jpg') +
                 createPlayerCard('77', '多田 瑞希', 'FIELD PLAYER', '楽しみながら勝ちにいきます！', 'images/member/77 FP 多田瑞希.jpg');
 
+            // Goleiro（GL）
+            document.getElementById('goleiro-grid').innerHTML =
+                createPlayerCard('17', '近藤 暁', 'GOLEIRO', '全力で守ってチームを支えます！', 'images/member/17 GL 近藤暁.jpg') +
+                createPlayerCard('23', '福田 真也', 'GOLEIRO', 'しっかりゴールを守り抜きます！', 'images/member/23 GL 福田真也.jpg');
+
             // Staff
-            document.getElementById('staff-grid').innerHTML = 
-                createStaffCard('監督', '霜出 聖也', 'チームを正しい方向に導きます。一緒に勝ちに行きましょう！', 'images/member/監督 霜出聖也.jpg');
+            document.getElementById('staff-grid').innerHTML =
+                createStaffCard('監督', '霜出 聖也', 'チームを正しい方向に導きます。一緒に勝ちに行きましょう！', 'images/member/監督 霜出聖也.jpg') +
+                createStaffCard('マネージャー', '塚本 明日香', 'チームを全力でサポートします！', 'images/member/MG 塚本明日香.jpg');
         </script>
 
     </main>
