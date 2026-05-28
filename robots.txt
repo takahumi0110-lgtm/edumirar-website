@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://takahumi0110-lgtm.github.io/edumirar-website/sitemap.xml
